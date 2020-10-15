@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FlowerShop</string>
+    <string name="Welcome">Добро пожаловать\n в магазин цветов!</string>
+    <string name="MakeOrder">Создать заказ</string>
+    <string name="EnterName">Введите ваше имя</string>
+    <string name="EnterPassword">Введите пароль</string>
+    <string name="flowers">Цветы</string>
+</resources>
