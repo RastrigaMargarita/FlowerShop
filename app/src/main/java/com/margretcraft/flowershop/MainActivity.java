@@ -26,9 +26,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        if (!textViewLogin.getText().toString().trim().isEmpty()){
+        if (!textViewLogin.getText().toString().trim().isEmpty()) {
 
-        outState.putString("username", textViewLogin.getText().toString());}
+            outState.putString("username", textViewLogin.getText().toString());
+        }
     }
 
     public void makeOrder(View view) {

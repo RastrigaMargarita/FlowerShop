@@ -3,6 +3,7 @@ package com.margretcraft.flowershop;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.*;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -47,6 +48,12 @@ public class OrderActivity extends AppCompatActivity {
         rb2 = findViewById(R.id.radioButtonPlenka);
         rb3 = findViewById(R.id.radioButtonColorPlenka);
         rb4 = findViewById(R.id.radioButtonPapir);
+
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();countCost();
     }
 
     private List getListOfFlowers() {
@@ -94,5 +101,10 @@ public class OrderActivity extends AppCompatActivity {
     public void countCost(View view) {
 
         countCost();
+    }
+
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+
     }
 }
