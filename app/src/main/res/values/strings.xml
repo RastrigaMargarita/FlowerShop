@@ -1,8 +1,53 @@
 <resources>
     <string name="app_name">FlowerShop</string>
-    <string name="Welcome">Добро пожаловать\n в магазин цветов!</string>
+    <string name="Welcome">Добро пожаловать\nв магазин цветов!</string>
     <string name="MakeOrder">Создать заказ</string>
     <string name="EnterName">Введите ваше имя</string>
     <string name="EnterPassword">Введите пароль</string>
     <string name="flowers">Цветы</string>
+    <string name="MainConsist">Основной состав букета:</string>
+    <string name="Papir">Бумага\n</string>
+    <string name="NoCover">Без\nупаковки</string>
+    <string name="Color">Цветная\nпленка</string>
+    <string name="Transparent">Прозрачная\nпленка</string>
+    <string name="AddConsist">Дополнения</string>
+    <string name="Cover">Упаковка</string>
+    <string name="YouBoucketCosts">Ваш букет стоит:</string>
+    <string name="Statica">Статица\nбелая</string>
+    <string name="Bergras">Берграс\n</string>
+    <string name="Paporotnik">Папоротник\n</string>
+
+    <string-array name="flowersList">
+        <item>Роза\n</item>
+        <item>Тюльпан\n</item>
+        <item>Пион\n</item>
+        <item>Гербера\n</item>
+        <item>Хризан-\nтема</item>
+    </string-array>
+    <integer-array name="flowersCost">
+        <item>100</item>
+        <item>45</item>
+        <item>90</item>
+        <item>80</item>
+        <item>60</item>
+    </integer-array>
+    <integer-array name="addCost">
+        <item>50</item>
+        <item>50</item>
+        <item>50</item>
+    </integer-array>
+    <integer-array name="coverCost">
+        <item>0</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+
+    </integer-array>
+    <string-array name="flowerColor">
+        <item>Красный</item>
+        <item>Белый</item>
+        <item>Желтый</item>
+        <item>Сиреневый</item>
+        <item>Розовый</item>
+    </string-array>
 </resources>

@@ -5,6 +5,176 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".OrderActivity">
+        tools:context=".OrderActivity"
+
+        android:hapticFeedbackEnabled="false" android:background="@color/Green">
+
+
+    <TextView
+            android:id="@+id/textView"
+            android:text="@string/MainConsist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="18sp" app:layout_constraintTop_toTopOf="parent" android:layout_margin="12sp"
+            android:fontFamily="sans-serif-medium" android:textColor="@color/DarkPink"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listViewMainFlowers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:orientation="horizontal">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <TextView
+            android:id="@+id/textView5"
+            android:text="@string/AddConsist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toBottomOf="@+id/listViewMainFlowers"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="18sp" android:layout_margin="12sp"
+            android:fontFamily="sans-serif-medium" android:textColor="@color/DarkPink"/>
+    <CheckBox
+            android:text="@string/Paporotnik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/checkBox1"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintStart_toStartOf="parent"
+
+            android:background="@color/lightpink"
+            android:drawableTop="@drawable/ad1" android:layout_margin="7sp"
+            android:buttonTint="@android:color/darker_gray"
+            android:onClick="countCost"/>
+    <CheckBox
+            android:text="@string/Statica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/checkBox2"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintStart_toEndOf="@+id/checkBox1"
+
+            android:drawableTop="@drawable/ad2" android:background="@color/lightpink" android:layout_margin="7sp"
+            android:buttonTint="@android:color/darker_gray"
+            android:onClick="countCost"/>
+    <CheckBox
+            android:text="@string/Bergras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/checkBox3"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintStart_toEndOf="@+id/checkBox2"
+
+            android:background="@color/lightpink" android:drawableTop="@drawable/ad3" android:layout_margin="7sp"
+            android:buttonTint="@android:color/darker_gray"
+            android:onClick="countCost"/>
+    <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/checkBox1"/>
+    <TextView
+            android:id="@+id/textView4"
+            android:text="@string/Cover"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toBottomOf="@+id/checkBox1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="18sp" android:layout_margin="12sp"
+            android:fontFamily="sans-serif-medium" android:textColor="@color/DarkPink"/>
+    <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal">
+        <RadioButton
+                android:text="@string/NoCover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/radioButtonNonCover"
+                android:background="@color/lightpink" android:layout_margin="3sp" android:textSize="12sp"
+                android:paddingBottom="10sp" android:buttonTint="@android:color/darker_gray"
+                android:onClick="countCost"/>
+        <RadioButton
+                android:text="@string/Transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/radioButtonPlenka" android:layout_margin="3sp"
+                android:background="@color/lightpink" android:textSize="12sp" android:paddingBottom="10sp"
+                android:buttonTint="@android:color/darker_gray"
+                android:onClick="countCost"/>
+        <RadioButton
+                android:text="@string/Color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/radioButtonColorPlenka"
+                android:layout_margin="3sp" android:background="@color/lightpink" android:textSize="12sp"
+                android:paddingBottom="10sp" android:buttonTint="@android:color/darker_gray"
+                android:onClick="countCost"/>
+        <RadioButton
+                android:text="@string/Papir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/radioButtonPapir" android:layout_margin="3sp"
+                android:background="@color/lightpink" android:textSize="12sp" android:paddingBottom="10sp"
+                android:buttonTint="@android:color/darker_gray"
+                android:onClick="countCost"/>
+    </RadioGroup>
+    <View
+            android:id="@+id/divider3"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/radioGroup"/>
+    <TextView
+            android:text="@string/YouBoucketCosts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            android:textSize="18sp" android:layout_margin="12sp" android:layout_marginTop="20sp"
+            android:textAlignment="center" app:layout_constraintEnd_toStartOf="@+id/textViewCost"
+            android:textColor="@android:color/background_dark"/>
+    <TextView
+            android:id="@+id/textViewCost"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" android:background="@color/lightpink"
+            android:layout_margin="12sp" android:textSize="24sp" android:layout_marginTop="15sp"
+            android:textAlignment="textEnd"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toStartOf="@+id/textView3"/>
+    <TextView
+            android:text="рублей"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" android:layout_margin="12sp" android:textSize="18sp"
+            android:layout_marginTop="20sp" android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"/>
+    <Button
+            android:text="Доставить"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="16dp"/>
+    <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/listViewMainFlowers"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
